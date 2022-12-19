@@ -1,5 +1,5 @@
 <?php
-include_once('../conexion.php');?>
+include_once('./conexion.php');?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,9 +28,17 @@ include_once('../conexion.php');?>
                 <br><b>Dificultad:</b> $campeon[difficulty]
                 <br><b>Descripción:</b> $campeon[description]<br>
             ";
+           echo "<div class='container-fluid'>
+            <div class='col-4 pt-2'>
+            <a href='./003editando.php?id=$campeon[id]' class='btn btn-primary' role='button'>Editar</a>
+            <a href='./champBorrado.php?id=$campeon[id]' class='btn btn-primary' role='button'>Borrar</a>    
+            </div>
+            </div>";
+
         }
     }
-
     ?>
+
+    
 </body>
 </html>

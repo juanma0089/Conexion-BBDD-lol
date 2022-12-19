@@ -1,5 +1,5 @@
 <?php
-include_once('../conexion.php');?>
+include_once('./conexion.php');?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,9 +7,9 @@ include_once('../conexion.php');?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/custom.css" rel="stylesheet">
-    <script defer src="../js/bootstrap.bundle.js"></script>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+    <script defer src="./js/bootstrap.bundle.js"></script>
     <title>Campeones lol</title>
 </head>
 <body>
@@ -28,17 +28,9 @@ include_once('../conexion.php');?>
                 <br><b>Dificultad:</b> $campeon[difficulty]
                 <br><b>Descripción:</b> $campeon[description]<br>
             ";
-           echo "<div class='container-fluid'>
-            <div class='col-4 pt-2'>
-            <a href='../003editando/003editando.php?id=$campeon[id]' class='btn btn-primary' role='button'>Editar</a>
-            <a href='../003editando/003editando.php?id=$campeon[id]' class='btn btn-primary' role='button'>Borrar</a>    
-            </div>
-            </div>";
-
         }
     }
-    ?>
 
-    
+    ?>
 </body>
 </html>

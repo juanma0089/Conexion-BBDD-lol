@@ -8,20 +8,23 @@
     $dificultad = $_POST['difficulty'];
     $descripcion = $_POST['description'];
 
-    $dificultades = ["Asesino", "Luchador", "Mago", "Tirador", "Apoyo", "Tanque"];
-    $roles = ["Baja", "Moderada", "Alta"];
+    $roles = ["Asesino", 'Luchador', "Mago", "Tirador", "Apoyo", "Tanque"];
+    $dificultades = ["Baja", "Moderada", "Alta"];
 
-    if($nombre != "" && $descripcion != "" && $dificultad == in_array($dificultad, $dificultades) && $descripcion == in_array($descripcion, $dificultades)){
+
+    if($id != '' && is_numeric($id) && $nombre != '' & is_string($nombre) && in_array($rol, $roles) && in_array($dificultad, $dificultades)){
         $conexion = connect();
         $consulta = "UPDATE `champ` SET `name` = '$nombre', `rol` = '$rol', `difficulty` = '$dificultad', `description` ='$descripcion'  WHERE `id` = '$id' ";
         
         $campEdit = mysqli_query($conexion, $consulta);
 
-        header('Location: ./003editando.php');
+        header('Location: ./002campeones.php');
         
         //?16/12/2022 clase commit
         //*redireccionar a formulario con los datos actualizado
+    } else {
+        header('Location: ./003editando.php?id='.$id);
     }
-
+    
     
     ?>   

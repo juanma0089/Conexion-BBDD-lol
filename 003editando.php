@@ -1,5 +1,5 @@
 <?php
-include_once('../conexion.php');
+include_once('./conexion.php');
 // recogemos por GET el id
 $id = $_GET['id'];
 
@@ -25,21 +25,21 @@ if ($listCampeones) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/custom.css" rel="stylesheet">
-    <script defer src="../js/bootstrap.bundle.js"></script>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+    <script defer src="./js/bootstrap.bundle.js"></script>
     <title>Editar Campeones</title>
 </head>
 <body>
     <div class="container ">
-        <form action="../champEditado.php" method="POST">
+        <form action="champEditado.php" method="POST">
             <div class="mb-3 mt-3" hidden>
                 <label for="id" class="form-label">ID</label>
-                <input type="number" disabled   class="form-control" id="id" value="<?= $id ?>">
+                <input type="number" hidden  class="form-control" name="id" id="id" value="<?= $id ?>">
             </div>
             <div class="mb-3 mt-3">
                 <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" value="<?= $nombre ?>">
+                <input type="text" class="form-control" id="name" name="name" value="<?= $nombre ?>">
             </div>
             <div class="mb-3">
                 <label for="rol">Rol</label>
@@ -62,10 +62,10 @@ if ($listCampeones) {
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descripción</label>
-                <textarea class="form-control" id="description" rows="7" value="<?=$descripcion?>" ><?=$descripcion?></textarea>
+                <textarea class="form-control" name="description" id="description" rows="7" value="<?=$descripcion?>" ><?=$descripcion?></textarea>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Enviar</button>
+                <input class="btn btn-primary" type="submit"></input>
             </div>   
         </form>    
              
