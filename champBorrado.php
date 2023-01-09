@@ -1,16 +1,16 @@
 <?php 
     include_once('./conexion.php');
 
-    $id = $_POST['id'];
+    $id = $_GET['id'];
    
 
+    if ($id != null){
         $conexion = connect();
-        $consulta = "DELETE FROM `champ` WHERE `id` = '$id' ";
+        $consulta = "DELETE FROM `champ` WHERE `id` = '$id';";
         
-        mysqli_query($conexion, $consulta);
+        $ChampBorrado = mysqli_query($conexion, $consulta);
 
-        header('Location: 002campeones/002campeones.php');
-        
-        header('Location: 003editando/003editando.php');
-    
+        header('Location: 002campeones.php'); 
+    }
+     
     ?>
