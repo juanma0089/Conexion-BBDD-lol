@@ -44,7 +44,6 @@ include_once('./conexion.php');?>
                 <div class='modal-content'>
                   <div class='modal-header'>
                     <h5 class='modal-title' id='modalLabel'>Confirmar borrado</h5>
-                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
                     </button>
                   </div>
                   <div class='modal-body'>
