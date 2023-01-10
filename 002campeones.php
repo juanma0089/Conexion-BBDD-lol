@@ -24,13 +24,15 @@ include_once('./conexion.php');?>
 
         foreach($listCampeones as $campeon){
 
-            echo "<br><b>Identificador: </b> $campeon[id]
+            echo 
+              "<br><b>Identificador: </b> $campeon[id]
                 <br><b>Nombre: </b> $campeon[name]
                 <br><b>Rol:</b> $campeon[rol]
                 <br><b>Dificultad:</b> $campeon[difficulty]
                 <br><b>Descripción:</b> $campeon[description]<br>
             ";
-           echo "<div class='container-fluid'>
+           echo 
+            "<div class='container-fluid'>
             <div class='col-4 pt-2'>
             <a href='003editando.php?id=$campeon[id]' class='btn btn-primary' role='button'>Editar</a>
             <button type='button' data-bs-toggle='modal' data-bs-target='#modal$campeon[id]' class='btn btn-primary' role='button'>Borrar</button>    
