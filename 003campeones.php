@@ -19,38 +19,74 @@ include_once('./conexion.php');?>
     $listCampeones = mysqli_query($conexion, $consulta);
     
     if($listCampeones) {
-
-        echo 
-        "<table  class='table text-center container'>
+    ?>
+       
+        <table  class='table text-center container'>
             <thead>
                 <tr>
-                <th scope='col'>ID</th>
-                <th scope='col'>
-                    <a href='champOrder.php?value=ASC' class='text-decoration-none'>
-                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-up' viewBox='0 0 16 16'>
-                            <path fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/>
-                        </svg>
-                    <a href='champOrder.php?value=DESC' class='text-decoration-none'>
-                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'>
-                            <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/>
-                        </svg>
-                    </a>
-                    Nombre
-                </th>
-                <th scope='col'>Rol</th>
-                <th scope='col'>Dificultad</th>
+                    <th scope='col'>
+                        <a href='champOrder.php?value=asc&col=id' class='text-decoration-none'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-up' viewBox='0 0 16 16'>
+                                <path fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/>
+                            </svg>
+                        <a href='champOrder.php?value=desc&col=id' class='text-decoration-none'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'>
+                                <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/>
+                            </svg>
+                        </a>
+                        ID
+                    </th>
+                    <th scope='col'>
+                        <a href='champOrder.php?value=asc&col=name' class='text-decoration-none'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-up' viewBox='0 0 16 16'>
+                                <path fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/>
+                            </svg>
+                        <a href='champOrder.php?value=desc&col=name' class='text-decoration-none'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'>
+                                <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/>
+                            </svg>
+                        </a>
+                        Nombre
+                    </th>
+                    <th scope='col'>
+                        <a href='champOrder.php?value=asc&col=rol' class='text-decoration-none'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-up' viewBox='0 0 16 16'>
+                                <path fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/>
+                            </svg>
+                        <a href='champOrder.php?value=desc&col=rol' class='text-decoration-none'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'>
+                                <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/>
+                            </svg>
+                        </a>
+                        Rol
+                    </th>
+                    <th scope='col'>
+                        <a href='champOrder.php?value=asc&col=difficulty' class='text-decoration-none'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-up' viewBox='0 0 16 16'>
+                                <path fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/>
+                            </svg>
+                        <a href='champOrder.php?value=desc&col=difficulty' class='text-decoration-none'>
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'>
+                                <path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/>
+                            </svg>
+                        </a>
+                        Dificultad
+                    </th>
+                    <th scope='col' class='col-6'>Descripción</th>
                 </tr>
             </thead>
-            ";
+            
+    <?php    
         foreach($listCampeones as $campeon){
     
         echo "
             <tbody>
                 <tr>
-                <th scope='row'>$campeon[id]</th>
-                <td>$campeon[name]</td>
-                <td>$campeon[rol]</td>
-                <td>$campeon[difficulty]</td>
+                    <th scope='row'>$campeon[id]</th>
+                    <td>$campeon[name]</td>
+                    <td>$campeon[rol]</td>
+                    <td>$campeon[difficulty]</td>
+                    <td>$campeon[description]</td>
                 </tr>
             </tbody>
             ";
