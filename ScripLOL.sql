@@ -4,7 +4,7 @@ USE lol;
 CREATE TABLE `champ` (
 `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 `name` VARCHAR(100) NOT NULL,
-`rol` ENUM("Asesino","Luchador","Mago","Tirador","Apoyo","Tanque") not null ,
+`rol` ENUM("Apoyo","Asesino","Luchador","Mago","Tanque","Tirador") not null ,
 `difficulty` ENUM("Baja","Moderada","Alta") not null,
 `description` VARCHAR(512)
 );
@@ -17,4 +17,15 @@ INSERT INTO `champ`(`name`, `rol`, `difficulty`, `description`) VALUES
 ("Braum","Apoyo","Baja","Bendecido con bíceps enormes y un corazón aún más grande, Braum es un héroe muy apreciado en Freljord. Todas las tabernas al norte del Fuerte Helado brindan por su fuerza legendaria. Se dice que taló un bosque de robles en una sola noche y convirtió una montaña entera en escombros. Cargando una puerta acorazada encantada a sus espaldas como escudo, Braum recorre el gélido norte luciendo una sonrisa bigotuda tan grande como sus músculos: un verdadero amigo para todos los necesitados.")
 ;
 
-SELECT * FROM `champ` ORDER BY `difficulty`, id ;
+CREATE TABLE `user` (
+`id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+`name` VARCHAR(100) NOT NULL,
+`username` VARCHAR(100) NOT NULL,
+`password` CHAR(40) NOT NULL,
+`email` VARCHAR(255) NOT NULL
+);
+
+INSERT INTO `user`(`name`, `username`, `password`, `email`) VALUES
+("Juanma","juanma0089","1234","jm@gmail.com"),
+("Jony","jony0093","4321","jn@gmail.com"),
+("Jairo","jairo0097","2143","jr@gmail.com");
