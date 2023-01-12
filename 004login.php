@@ -1,7 +1,4 @@
-<?php
-include_once('./conexionPDO.php');
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,16 +15,15 @@ include_once('./conexionPDO.php');
         <div class="vh-100 d-flex justify-content-center align-items-center">
             <div class="col-md-4 p-5 shadow-sm border rounded-3">
                 <h2 class="text-center mb-4 text-primary">Login</h2>
-                <form action="compareLoginDDBB.php" method="POST">
+                <form action="compareLogin.php" method="POST">
                     <div class="mb-3">
                         <label for="exampleInputUSername1" for="username" class="form-label">Username</label>
-                        <input type="username" name="username" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="username" name="username" class="form-control border border-primary <?php if ($GET) echo "border-ganger"?>" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" for="password" class="form-label">Password</label>
-                        <input type="password" name="pass" class="form-control border border-primary" id="exampleInputPassword1">
+                        <input type="password" name="pass" class="form-control border border-primary <?php if ($GET) echo "border-ganger"?>" id="exampleInputPassword1">
                     </div>
-                    
                     <div class="d-grid">
                     <button class="btn btn-primary" type="submit">Login</button>
                     </div>

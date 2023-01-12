@@ -16,8 +16,6 @@ include_once './conexion.php';?>
     
     <?php
 
-   
- 
     $orden = $_GET['value'];
     $col = $_GET['col'];
     $consulta = ""; 
@@ -32,7 +30,6 @@ include_once './conexion.php';?>
        
         if ($listCampeones) {
     ?>
-
             <table class='table text-center container'>
                 <thead>
                     <tr>

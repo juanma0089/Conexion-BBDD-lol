@@ -19,25 +19,30 @@
             <form class="row g-3 d-flex justify-content-center align-items-center" action="006nuevoUsuario.php" method="POST">
                 <div class="col-md-7">
                     <label for="validationDefault01" class="form-label">Nombre</label>
-                    <input type="text" name="name" class="form-control" id="validationDefault01" value="" required>
+                    <input type="text" name="name" class="form-control <?php if ($GET) echo "border-ganger"?>" id="validationDefault01" value="" required>
                 </div>
                 <div class="col-md-7">
                     <label for="validationDefaultUsername" class="form-label">Nombre usuario</label>
                     <div class="input-group">
-                        <input type="text" name="username" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+                        <input type="text" name="username" class="form-control <?php if ($GET) echo "border-ganger"?>" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
                     </div>
                 </div>
                 <div class="col-md-7">
                     <label for="validationDefaultPassword" class="form-label">Contraseña</label>
-                    <input type="password" name="pass" class="form-control" id="validationDefaultPassword" required>
+                    <input type="password" name="pass" class="form-control <?php if ($GET) echo "border-ganger"?>" id="validationDefaultPassword" required>
                 </div>
                 <div class="col-md-7">
                     <label for="validationDefaultEmail" class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" id="validationDefaultEmail" required>
+                    <input type="email" name="email" class="form-control <?php if ($GET) echo "border-ganger"?>" id="validationDefaultEmail" required>
                 </div>
                 <div class="col-6 d-flex d-flex justify-content-center align-items-center">
                     <button class="btn btn-primary" type="submit">Crear usuario</button>
                 </div>
+                <?php if($_GET){ ?>
+                    <div class='alert alert-danger' role='alert'>
+                           <h4>Error en los campos requeridos, rellene todo los campos</h4>
+                    </div>
+                    <?php }?>
             </form>
         </div>
     </div>

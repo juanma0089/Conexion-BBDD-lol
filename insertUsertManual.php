@@ -1,7 +1,7 @@
 <?php
 include_once('./conexionPDO.php');
 
-$user1 = ['Jhon','JonhNieve','1234','got@gmail'];
+$user1 = ['Jon','JonNieve','1234','got@gmail'];
 $user2 = ['Thor','MartilloFurioso','4321','mcu@gmail'];
 $user3 = ['Tony','theBoss','0000','starkindustries@gmail'];
 
