@@ -16,7 +16,7 @@
     <div class="vh-100 d-flex justify-content-center align-items-center">
         <div class="col-md-3 p-5 shadow-sm border rounded-3">
             <h2 class="text-center mb-4 text-primary">Registro</h2>
-            <form class="row g-3 d-flex justify-content-center align-items-center" action="compareSignIn.php" method="POST">
+            <form class="row g-3 d-flex justify-content-center align-items-center" action="006nuevoUsuario.php" method="POST">
                 <div class="col-md-7">
                     <label for="validationDefault01" class="form-label">Nombre</label>
                     <input type="text" name="name" class="form-control" id="validationDefault01" value="" required>
@@ -30,6 +30,10 @@
                 <div class="col-md-7">
                     <label for="validationDefaultPassword" class="form-label">Contraseña</label>
                     <input type="password" name="pass" class="form-control" id="validationDefaultPassword" required>
+                </div>
+                <div class="col-md-7">
+                    <label for="validationDefaultEmail" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="validationDefaultEmail" required>
                 </div>
                 <div class="col-6 d-flex d-flex justify-content-center align-items-center">
                     <button class="btn btn-primary" type="submit">Crear usuario</button>

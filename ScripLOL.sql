@@ -25,7 +25,3 @@ CREATE TABLE `user` (
 `email` VARCHAR(255) NOT NULL unique
 );
 
-INSERT INTO `user`(`name`, `username`, `password`, `email`) VALUES
-("Juanma","juanma0089","1234","jm@gmail.com"),
-("Jony","jony0093","4321","jn@gmail.com"),
-("Jairo","jairo0097","2143","jr@gmail.com");
