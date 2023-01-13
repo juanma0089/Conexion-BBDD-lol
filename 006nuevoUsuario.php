@@ -24,7 +24,7 @@ try {
             'email' => $email
         ])) {
             //añadimos un delay de 3 segundos antes de redireccionar
-            header("refresh:4;url=./004login.php");
+            header("refresh:2;url=./004login.php");
 ?>
 
             <!DOCTYPE html>

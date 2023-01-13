@@ -38,7 +38,7 @@ if($_POST){
             </html>
 
     <?php
-            header("refresh:3;url=./003campeones.php");
+            header("refresh:1;url=./003campeones.php");
         } else {
             echo "el usuario no existe";
 
